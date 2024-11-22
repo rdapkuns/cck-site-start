@@ -1,0 +1,41 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="News">
+  <div class="container">
+    <h2><span>News</span></h2>
+    <ul>
+
+            <li>
+              <article>
+                <h3>##TITLE##</h3>
+                <time datetime={##DATE##}>
+                  {##DATE##}
+                </time>
+                <div class="md">
+                  ##CONTENT##
+                </div>
+              </article>
+            </li>
+
+    </ul>
+  </div>
+</Base>
+
+<style>
+  li:has(+ li) {
+    border-bottom: solid grey 1px;
+    padding-bottom: var(--sp-l);
+    margin-bottom: var(--sp-xl);
+  }
+
+  h3 {
+    margin-bottom: var(--sp-2xs);
+  }
+
+  time {
+    display: block;
+    margin-bottom: var(--sp-l);
+  }
+</style>
